@@ -9,7 +9,7 @@ namespace CRUD
 {
     public class DbConnection : IDisposable
     {
-        private static string connectionString => SetConnectionString();
+        private static string connectionString => "server=10.0.10.3;port=3306;userid=epludowska;password=epludowska;database=PFSwChO;";
 
         private static MySqlConnection SqlConnection;
 
@@ -35,7 +35,7 @@ namespace CRUD
 
         private static string SetConnectionString()
         {
-            using (StreamReader r = new StreamReader(".\\dbConfig.json"))
+            using (StreamReader r = new StreamReader("dbConfig.json"))
             {
                 string json = r.ReadToEnd();
                 var a =  JObject.Parse(json);// ?? throw new Exception("Fail to read and load connection string from json file.");

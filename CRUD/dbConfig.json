@@ -1,3 +1,3 @@
 {
-  "connectionString": "server=localhost;port=3306;userid=root;password=;database=mysql;"
+  "connectionString": "server=10.0.10.3;port=3306;userid=epludowska;password=epludowska;database=PFSwChO;"
 }

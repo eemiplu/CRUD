@@ -12,8 +12,9 @@ namespace CRUD
         static void Main(string[] args)
         {
             DbConnection.OpenConnection(DbConnection.GetConnection());
-
             DbManagement db = new DbManagement();
+            
+            db.CreateDb();
 
             var isAlive = true;
 
@@ -65,22 +66,19 @@ namespace CRUD
                     var id = Console.ReadLine();
 
                     Console.WriteLine("Wybierz wartość, która ma być modyfikowana");
-                    Console.WriteLine("1) Id");
-                    Console.WriteLine("2) Imie");
-                    Console.WriteLine("3) Nazwisko");
-                    Console.WriteLine("4) Wiek");
+                    Console.WriteLine("1) Imie");
+                    Console.WriteLine("2) Nazwisko");
+                    Console.WriteLine("3) Wiek");
 
                     data = Console.ReadLine();
                     
                     string columnName = "";
 
                     if (data == "1")
-                        columnName = "Id";
-                    if (data == "2")
                         columnName = "Name";
-                    if (data == "3")
+                    if (data == "2")
                         columnName = "Surname";
-                    if (data == "4")
+                    if (data == "3")
                         columnName = "Age";
 
                     Console.WriteLine("Podaj wartość " + columnName);
