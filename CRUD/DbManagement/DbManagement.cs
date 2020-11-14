@@ -9,7 +9,7 @@ namespace CRUD
     {
         public void CreateDb()
         {
-            string sqlCreate = "CREATE DATABASE IF NOT EXISTS PFSwChO;\r\nCREATE TABLE IF NOT EXISTS PFSwCho.dane\r\n(\r\n    id MEDIUMINT NOT NULL AUTO_INCREMENT,\r\n    name VARCHAR(30),\r\n    surname VARCHAR(30),\r\n    age INT(3),\r\n    PRIMARY KEY (id)\r\n)";
+            string sqlCreate = "CREATE DATABASE IF NOT EXISTS PFSwChO;\r\nCREATE TABLE IF NOT EXISTS PFSwChO.dane\r\n(\r\n    id MEDIUMINT NOT NULL AUTO_INCREMENT,\r\n    name VARCHAR(30),\r\n    surname VARCHAR(30),\r\n    age INT(3),\r\n    PRIMARY KEY (id)\r\n)";
 
             //using (StreamReader streamReader = new StreamReader(".\\Scripts\\CreateDb.sql", Encoding.UTF8))
             //{

@@ -9,7 +9,7 @@ namespace CRUD
 {
     public class DbConnection : IDisposable
     {
-        private static string connectionString => "server=10.0.10.3;port=3306;userid=epludowska;password=epludowska;database=PFSwChO;";
+        private static string connectionString => "server=10.0.10.3;port=3306;userid=root;password=;database=PFSwChO;";
 
         private static MySqlConnection SqlConnection;
 
@@ -27,7 +27,7 @@ namespace CRUD
             sqlConnection.Open();
         }
 
-        public void Dispose() //to chyba nie działa KEKW
+        public void Dispose()
         {
             SqlConnection.Close();
             SqlConnection.Dispose();
